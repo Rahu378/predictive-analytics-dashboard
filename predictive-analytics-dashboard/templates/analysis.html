@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Sales Analysis</h1>
+<div class="row">
+    <div class="col-md-6">
+        <h3>Total Sales</h3>
+        <p>{{ total_sales }}</p>
+    </div>
+    <div class="col-md-6">
+        <h3>Total Predicted Sales</h3>
+        <p>{{ total_predicted_sales }}</p>
+    </div>
+    <div class="col-md-6">
+        <h3>Average Sales</h3>
+        <p>{{ avg_sales }}</p>
+    </div>
+    <div class="col-md-6">
+        <h3>Average Predicted Sales</h3>
+        <p>{{ avg_predicted_sales }}</p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Dynamic Dashboard</h1>
+
+<!-- Column Selection Form -->
+<form method="POST" class="mb-3">
+    <div class="row">
+        <div class="col-md-6">
+            <label for="x_axis">X-Axis</label>
+            <select name="x_axis" id="x_axis" class="form-control">
+                <option value="">Select Column</option>
+                {% for col in columns %}
+                <option value="{{ col }}">{{ col }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="y_axis">Y-Axis</label>
+            <select name="y_axis" id="y_axis" class="form-control">
+                <option value="">Select Column</option>
+                {% for col in numeric_columns %}
+                <option value="{{ col }}">{{ col }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Generate Chart</button>
+</form>
+
+<!-- Plotly Chart -->
+{% if chart_data %}
+<div id="chart" style="height: 400px;"></div>
+<script src="https://cdn.plot.ly/plotly-2.25.2.min.js"></script>
+<script>
+    var chartData = {{ chart_data | safe }};
+    Plotly.newPlot('chart', chartData, {
+        title: 'Dynamic Analysis',
+        xaxis: { title: '{{ x_axis }}' },
+        yaxis: { title: '{{ y_axis }}' }
+    });
+</script>
+{% endif %}
+{% endblock %}
