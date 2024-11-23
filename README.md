@@ -12,19 +12,20 @@ Welcome to the Predictive Analytics Dashboard! This web application allows users
 - **Responsive Design**: Optimized for desktop and mobile users.
 
 
-Prerequisites
+ 🛠️ **Prerequisites**
 - Python 3.8 or later
 - Pip (Python package installer)
 - Git
 
-1.Set Up a Virtual Environment:
+1.**Set Up a Virtual Environment:**
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-2.Install Dependencies:
+2.**Install Dependencies:**
 pip install -r requirements.txt
 
-3.Run the Application:
+3.**Run the Application:**
 python app.py
 
-
+4.**Access the App: Open your browser and navigate to:**
+Home Page: http://127.0.0.1:5000
