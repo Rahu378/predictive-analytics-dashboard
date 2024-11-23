@@ -1,17 +1,30 @@
 # Predictive Analytics Dashboard
 
-The Predictive Analytics Dashboard is a dynamic and interactive web application for visualizing and analyzing data from uploaded CSV files. It adapts to any dataset and allows users to explore trends, filter data, and generate insights through visualizations and tables.
+Welcome to the Predictive Analytics Dashboard! This web application allows users to upload CSV files, dynamically analyze data, and visualize trends using interactive charts. The dashboard is flexible and adapts to any dataset, making it a powerful tool for data exploration and insights.
 
-Features
-- Dynamic File Upload: Upload any CSV file for analysis.
-- Automatic Column Detection: Automatically identifies numeric and categorical columns.
-- Customizable Charts: Create interactive charts by selecting X-axis and Y-axis columns.
-- Filtering and Aggregation: Filter data by region, item type, sales channel, or other relevant columns.
-- Responsive Design: User-friendly and mobile-compatible interface.
-- Plotly Visualizations: Generate line, bar, and scatter charts dynamically.
+## 🌟 Features
+
+- **Dynamic CSV File Upload**: Users can upload any CSV file for analysis.
+- **Automatic Data Analysis**: Detects numeric, text, and date columns for dynamic filtering and chart creation.
+- **Interactive Visualizations**: Generates line, scatter, and bar charts with Plotly.
+- **Data Table**: Displays raw and filtered data in a tabular format.
+- **Filters and Dropdowns**: Filter data by specific columns like Region, Product Type, or Date Range.
+- **Responsive Design**: Optimized for desktop and mobile users.
+
 
 Prerequisites
 - Python 3.8 or later
 - Pip (Python package installer)
-- Git 
+- Git
+
+1.Set Up a Virtual Environment:
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+2.Install Dependencies:
+pip install -r requirements.txt
+
+3.Run the Application:
+python app.py
+
 
